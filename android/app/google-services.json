@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "516005930556",
+    "project_id": "flutter-demo-97835",
+    "storage_bucket": "flutter-demo-97835.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516005930556:android:986c8934a6d3c976190539",
+        "android_client_info": {
+          "package_name": "com.example.instant_gram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYr4HEO6-IjZgEBwXEqVRv4OkZoB9a7h8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
