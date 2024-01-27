@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">907846534079475</string>
+    <string name="fb_login_protocol_scheme">fb907846534079475</string>
+    <string name="facebook_client_token">9ce7a0b4365da7cb7d103e02cb4d1db4</string>
+    <string name="app_name">Instant Gram</string>
+</resources>
+
