@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instant_gram/firebase_options.dart';
-import 'package:instant_gram/state/auth/backend/authenticator.dart';
 import 'package:instant_gram/state/auth/providers/auth_state_provider.dart';
 
 import 'dart:developer' as devtools show log;
