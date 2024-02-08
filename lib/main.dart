@@ -4,15 +4,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instant_gram/firebase_options.dart';
 import 'package:instant_gram/state/auth/providers/auth_state_provider.dart';
 
-import 'dart:developer' as devtools show log;
-
 import 'package:instant_gram/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instant_gram/state/providers/is_loading_provider.dart';
 import 'package:instant_gram/views/components/loading/loading_screen.dart';
-
-extension Log on Object {
-  void log() => devtools.log(toString());
-}
+import 'package:instant_gram/views/login/login_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -80,33 +75,6 @@ class MainView extends StatelessWidget {
           child: const Text("Logout"),
         );
       }),
-    );
-  }
-}
-
-class LoginView extends ConsumerWidget {
-  const LoginView({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login View'),
-      ),
-      body: Column(children: [
-        TextButton(
-          onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
-          child: const Text("Sign In With Google"),
-        ),
-        TextButton(
-          onPressed: ref.read(authStateProvider.notifier).loginWithFacebook,
-          child: const Text("Sign In With Facebook"),
-        ),
-        TextButton(
-          onPressed: ref.read(authStateProvider.notifier).loginAnonymously,
-          child: const Text("Sign In With Anonymously"),
-        ),
-      ]),
     );
   }
 }
