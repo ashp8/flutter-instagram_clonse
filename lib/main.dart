@@ -7,6 +7,8 @@ import 'package:instant_gram/state/auth/providers/auth_state_provider.dart';
 import 'dart:developer' as devtools show log;
 
 import 'package:instant_gram/state/auth/providers/is_logged_in_provider.dart';
+import 'package:instant_gram/state/providers/is_loading_provider.dart';
+import 'package:instant_gram/views/components/loading/loading_screen.dart';
 
 extension Log on Object {
   void log() => devtools.log(toString());
@@ -41,6 +43,15 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: Consumer(builder: (context, ref, child) {
+        // take care of displaying the loading screen.
+        ref.listen<bool>(isLoadingProvider, (_, isLoading) {
+          if (isLoading) {
+            LoadingScreen.instance().show(context: context);
+          } else {
+            LoadingScreen.instance().hide();
+          }
+        });
+
         final isLoggedIn = ref.watch(isLoggedInProvider);
         if (isLoggedIn) {
           return const MainView();
